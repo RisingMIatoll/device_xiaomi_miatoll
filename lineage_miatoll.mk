@@ -39,6 +39,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 WITH_GMS := true
 TARGET_USES_PICO_GAPPS := true
 
+PRODUCT_PACKAGES_REMOVE += \
+    DeviceIntelligenceNetworkPrebuilt
+
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="miatoll_global-user 12 SKQ1.211019.001 V14.0.3.0.SJZMIXM release-keys" \
