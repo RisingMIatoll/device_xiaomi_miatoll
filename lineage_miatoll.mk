@@ -42,6 +42,10 @@ TARGET_USES_PICO_GAPPS := true
 PRODUCT_PACKAGES_REMOVE += \
     DeviceIntelligenceNetworkPrebuilt
 
+# Auto-remove invalid packages to avoid build errors
+PRODUCT_PACKAGES := $(foreach p,$(PRODUCT_PACKAGES), \
+    $(if $(call module-exists,$(p)),$(p),))
+
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="miatoll_global-user 12 SKQ1.211019.001 V14.0.3.0.SJZMIXM release-keys" \
