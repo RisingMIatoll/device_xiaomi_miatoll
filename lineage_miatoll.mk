@@ -36,15 +36,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingMaintainer="$(RISING_MAINTAINER)"
 
 # CORE build flags
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
+WITH_GMS := false
 
 PRODUCT_PACKAGES_REMOVE += \
-    DeviceIntelligenceNetworkPrebuilt
+    DeviceIntelligenceNetworkPrebuilt \
+    DeviceIntelligenceNetworkPrebuilt.apk
 
-# Auto-remove invalid packages to avoid build errors
-PRODUCT_PACKAGES := $(foreach p,$(PRODUCT_PACKAGES), \
-    $(if $(call module-exists,$(p)),$(p),))
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
