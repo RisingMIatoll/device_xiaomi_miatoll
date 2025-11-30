@@ -35,8 +35,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Snapdragon 720G" \
     RisingMaintainer="$(RISING_MAINTAINER)"
 
-# CORE build flags
-WITH_GMS := false
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
 
 PRODUCT_PACKAGES_REMOVE += \
     DeviceIntelligenceNetworkPrebuilt \
