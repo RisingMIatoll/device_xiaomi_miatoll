@@ -31,10 +31,12 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Rising Flags
 RISING_MAINTAINER="AbdoElbanaa"
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Snapdragon 720G" \
     RisingMaintainer="AbdoElbanaa"
-RISING_MAINTAINER=AbdoElbanaa
+
+RISING_MAINTAINER := AbdoElbanaa
 
 WITH_GMS := true
 
