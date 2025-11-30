@@ -36,12 +36,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingMaintainer="$(RISING_MAINTAINER)"
 
 WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
-
-PRODUCT_PACKAGES_REMOVE += \
-    DeviceIntelligenceNetworkPrebuilt \
-    DeviceIntelligenceNetworkPrebuilt.apk
-
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
